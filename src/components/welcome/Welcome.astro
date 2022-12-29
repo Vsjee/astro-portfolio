@@ -11,9 +11,15 @@ import devImg from '../../assets/development-4536630.svg';
             <button class='btn'>Github</button>
         </div>
     </article>
-    <article class='section__img'>
+    <article
+        class='section__img'
+        data-tilt
+        data-tilt-max='10'
+        data-tilt-speed='400'
+        data-tilt-perspective='500'
+    >
         <picture>
-            <img src={devImg} alt='' width='500' height='500' />
+            <img src={devImg} alt='dev img' width='500' height='500' />
         </picture>
     </article>
 </section>
@@ -55,11 +61,7 @@ import devImg from '../../assets/development-4536630.svg';
         color: var(--fontMainBlack);
     }
     .section__info--span {
-        background-image: radial-gradient(
-            circle,
-            rgba(63, 94, 251, 1) 0%,
-            rgba(252, 70, 107, 1) 100%
-        );
+        background-image: var(--basicLinearGradient);
 
         background-size: 100%;
         background-repeat: repeat;
@@ -73,6 +75,7 @@ import devImg from '../../assets/development-4536630.svg';
     .section__img {
         width: 50%;
     }
+    .section__img picture,
     .section__img picture img {
         width: 90%;
     }
@@ -80,6 +83,8 @@ import devImg from '../../assets/development-4536630.svg';
     @media screen and (max-width: 700px) {
         .section {
             flex-direction: column;
+            margin-bottom: 20rem;
+            transition: 1s ease;
         }
         .section__info {
             width: 100%;
@@ -98,4 +103,18 @@ import devImg from '../../assets/development-4536630.svg';
             height: auto;
         }
     }
+    @media screen and (max-width: 500px) {
+        .section {
+            margin-bottom: 10rem;
+        }
+    }
 </style>
+
+<script>
+    import { VanillaTilt } from '../../js/vanilla-tilt';
+
+    VanillaTilt.init(document.querySelector('.section__img'), {
+        max: 15,
+        speed: 400,
+    });
+</script>

@@ -186,3 +186,11 @@ import sqlIcon from '../../assets/sql.svg';
     const hiddenElementsToLeft = document.querySelectorAll('.hiddenL');
     hiddenElementsToLeft.forEach((element) => observer.observe(element));
 </script>
+<script>
+    import { VanillaTilt } from '../../js/vanilla-tilt';
+
+    VanillaTilt.init(document.querySelectorAll('.logo'), {
+        max: 26,
+        speed: 600,
+    });
+</script>
