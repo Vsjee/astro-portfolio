@@ -16,6 +16,7 @@ function ProyectCard({ card }: Props) {
                         src={card.image}
                         alt={card.title}
                         className='card__prev'
+                        loading='lazy'
                     />
                 </picture>
             </div>
