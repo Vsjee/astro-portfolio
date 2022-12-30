@@ -13,7 +13,7 @@ import type { ProyectInfo } from './models/proyectsData.model';
 
 function ProyectsCarousel() {
     return (
-        <section className='section__carousel '>
+        <section className='section__carousel ' id='work'>
             <h1>Work/Proyects</h1>
             <Swiper
                 spaceBetween={20}
