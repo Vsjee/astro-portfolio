@@ -1,14 +1,19 @@
 ---
+import logo from '/logoBlack.svg';
 ---
 
 <header class='header'>
     <nav class='header__nav'>
-        <h1>Icon</h1>
+        <a href='#top'>
+            <picture class='header__nav__picture'>
+                <img src={logo} alt='logo' width='30' />
+            </picture>
+        </a>
         <ul class='header__nav__list'>
-            <a href='#' class='header__nav__list--item'>About</a>
-            <a href='#' class='header__nav__list--item'>Stack</a>
-            <a href='#' class='header__nav__list--item'>Work</a>
-            <a href='#' class='header__nav__list--item'>
+            <a href='#about' class='header__nav__list--item'>About</a>
+            <a href='#stack' class='header__nav__list--item'>Stack</a>
+            <a href='#work' class='header__nav__list--item'>Work</a>
+            <a href='#contact' class='header__nav__list--item'>
                 <button class='item__btn'>Contact</button>
             </a>
         </ul>

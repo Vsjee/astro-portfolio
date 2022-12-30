@@ -20,4 +20,14 @@
         BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
         'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+    scroll-behavior: smooth;
+}
+
+*:target[id='about'] {
+    scroll-margin-top: 170px;
+}
+
+*:target[id='stack'],
+*:target[id='work'] {
+    scroll-margin-top: 50px;
 }
