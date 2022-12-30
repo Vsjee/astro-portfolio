@@ -2,11 +2,44 @@
 ---
 
 <footer class='footer'>
-    <h1>footer</h1>
+    <section>
+        <p>Made and desing by David Hernandez.</p>
+    </section>
+    <section class='links'>
+        <a href='https://github.com/Vsjee' target='_blank'
+            ><img
+                src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAbRJREFUOE99lIFRAjEQRd9W4FGBdiBWAHYAFYgVKBUAFYgVCBVAB2AF0oFYgUcF6/zc3l3w0MzcTC7Z/Pzd/zdGNgzw+E/zfKETeL6pP+icSgsFMADrG64LDmDv4GWFaaT1wLMOCxDACzCpD7Q8050rhykQgG1UTrqPscG5yRdb1k3eR5yxwaEqhdg1wwrwDxCIrcFHwFWTQhV3ArbAA3A0uPNglqe2BJ4iWOnp6wdQ6UaBq06UGAfcbsHXVQlqRinIvlMtjBNO0da/q47DEbiOZHoCr1MbArtId4Ezv6xmI/AcZxYxY9y2VWrGHLdZqHMP7DsWOpd3iLOLs+ni2kcJKHwxxVn+60WQEJtLQCPcNsFoCzbOvZMpW5twhSflNMbQpiZFVMCr2FSNXivT5Q5O82c3XrL+6YGVv+UfAAtgFW33qNuCndJ5MyjqfgTWGBOBZr2WJN87fFK1wARjiTet0Adk2Fq6L3B1QpmAfhVVGyvcPg2X/WU4pazDQ9x2we4LbBQx1XYLVLdxcrBqJEaSWW7WECPZQk2r/fOmzR0cz8VfXuz07pma+VN02YR/OaqF0ewHJHa4G1xgV7kAAAAASUVORK5CYII='
+            />
+        </a>
+        <a
+            href='https://www.linkedin.com/in/david-felipe-hernandez-547109205/'
+            target='_blank'
+            ><img
+                src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAW9JREFUOE99lIFVwzAMRP9NwAiswAZtN2ADugFlAsoGYYOOABPE3aCjsIF4ku3GJg5+L4ljW2edTpK4DwFW/so8Pu06DE7hq1o2hLACtWVczrQXlLl/6jgCL/VndTY2WqDw7ttgyjv1bUrCdpnc4OYBEHBF7J1GppZfCWyH+CjzC+LRN1vKMV+YX4F9XN1EIwncowMEaAJ2DfWRpyOPyIbihnEDjlWigXgVvwBV1XpqbwVoyqC6gD2DX6QfsCfgDHoAW6g1rlcqBzcSJBMJc6NVtrlSr4Kr1Rg1R3KwS4yEJQsvAsgDOoM+hZ2K8RxAVbWVR+LgqgVQeKSzsLOJd4xMJYw1B7VN+XvVPC4ZCN49bwT77JFmYYVaVyJFtRW1HqjQXICyd21m34FOoJuwyYg0uEQq5Mf/T4Ar5wEfqdaWyD9V3hf2kkdLrcVNni9/xlZXiPUvE1PU2rgfDTJna6m2rrYfLY2tt1r1qb5dxeFfOgrQGZlIWx0AAAAASUVORK5CYII='
+            />
+        </a>
+    </section>
 </footer>
 
 <style>
     .footer {
-        background-color: black;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        padding: 0.6rem;
+        justify-content: space-between;
+        border-top: 2px solid black;
+        font-size: 0.7rem;
+        transition: all 1s;
+    }
+    .links {
+        display: inline-flex;
+        gap: 1rem;
+    }
+
+    @media screen and (max-width: 380px) {
+        .footer {
+            width: 95%;
+        }
     }
 </style>
