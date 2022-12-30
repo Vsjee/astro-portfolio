@@ -1,0 +1,58 @@
+---
+---
+
+<section class='section'>
+    <article class='section__card'>
+        <p>What's next?</p>
+        <h1>Get In touch</h1>
+        <p class='card__text'>
+            I’m looking for any new opportunities, my inbox is always open.
+            Whether you have a question or just want to say hi, I’ll try my best
+            to get back to you!
+        </p>
+        <a
+            class='email__link'
+            href='mailto:davidfelipehernandez1@gmail.com'
+            rel='noopener noreferrer'>Say hello</a
+        >
+    </article>
+</section>
+
+<style>
+    .section {
+        min-height: 100vh;
+        display: grid;
+        place-content: center;
+    }
+    .section__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .section__card h1 {
+        margin: 0.5rem 0 2rem 0;
+        font-size: 1.5rem;
+    }
+    .section__card p {
+        text-align: center;
+    }
+    .card__text {
+        width: 320px;
+    }
+
+    .email__link {
+        margin-top: 2rem;
+        color: var(--fontMainBlack);
+        text-decoration: none;
+        border: 2px solid var(--fontMainBlack);
+        border-radius: 5px;
+        padding: 0.5rem;
+        transition: 0.3s ease;
+    }
+    .email__link:hover {
+        background-image: var(--basicLinearGradient);
+        border: 2px solid var(--fontMainWhite);
+        color: var(--fontMainWhite);
+    }
+</style>
