@@ -2,8 +2,14 @@
     --fontMainBlack: #000000;
     --fontMainWhite: #ffffff;
     --fontSecond: #475569;
-    --fontThird: #64748b;
+    --fontThird: #708096;
     --mainColor: #df636d;
+    --secondColor: #000000;
+    --basicLinearGradient: radial-gradient(
+        circle,
+        rgba(63, 94, 251, 1) 0%,
+        rgba(252, 70, 107, 1) 100%
+    );
 }
 
 * {

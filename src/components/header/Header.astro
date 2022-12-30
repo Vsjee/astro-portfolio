@@ -7,7 +7,7 @@
         <ul class='header__nav__list'>
             <a href='#' class='header__nav__list--item'>About</a>
             <a href='#' class='header__nav__list--item'>Stack</a>
-            <a href='#' class='header__nav__list--item'>Proyects</a>
+            <a href='#' class='header__nav__list--item'>Work</a>
             <a href='#' class='header__nav__list--item'>
                 <button class='item__btn'>Contact</button>
             </a>
@@ -22,8 +22,7 @@
         width: 100%;
         z-index: 1;
 
-        background: rgba(255, 255, 255, 0.9);
-        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.8);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
     }
@@ -57,10 +56,6 @@
         transition: 0.3s ease-in;
     }
     .item__btn:hover {
-        background-image: radial-gradient(
-            circle,
-            rgba(63, 94, 251, 1) 0%,
-            rgba(252, 70, 107, 1) 100%
-        );
+        background-image: var(--basicLinearGradient);
     }
 </style>
