@@ -54,4 +54,20 @@ export const proyectsData: ProyectInfo[] = [
         github: 'https://github.com/Vsjee/React-to-do',
         techStack: ['React', 'JavaScript', 'Bootstrap'],
     },
+    {
+        id: 4,
+        title: 'Galery-Share-app',
+        image: 'src/assets/swiper/GaleryShareApp.png    ',
+        linkProyect: 'https://photo-galery-rho.vercel.app/home',
+        github: 'https://github.com/Vsjee/photo-galery',
+        techStack: [
+            'Angular',
+            'TypeScript',
+            'Firebase, fireAuth, fireStorage',
+            'NgRx',
+            'RxJs',
+            'Angular/material',
+            'Scss',
+        ],
+    },
 ];
