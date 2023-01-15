@@ -6,8 +6,6 @@ interface Props {
 }
 
 function ProyectCard({ card }: Props) {
-    console.log(card);
-
     return (
         <article className='card'>
             <div className='card__picture'>
