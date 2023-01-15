@@ -4,7 +4,7 @@ export const proyectsData: ProyectInfo[] = [
     {
         id: 0,
         title: 'E-commerce',
-        image: 'public/sneakShop.png',
+        image: 'sneakShop.png',
         linkProyect: 'https://scintillating-valkyrie-973a26.netlify.app/',
         github: 'https://github.com/Vsjee/sneakers-e-commerce',
         techStack: [
@@ -19,7 +19,7 @@ export const proyectsData: ProyectInfo[] = [
     {
         id: 1,
         title: 'Chat-app',
-        image: 'public/chatApp.png',
+        image: 'chatApp.png',
         linkProyect: '',
         github: 'https://github.com/Vsjee/chat-app',
         techStack: [
@@ -33,7 +33,7 @@ export const proyectsData: ProyectInfo[] = [
     {
         id: 2,
         title: 'Coffes-app',
-        image: 'public/coffeApp.png',
+        image: 'coffeApp.png',
         linkProyect: 'https://sage-lollipop-09b40f.netlify.app',
         github: 'https://github.com/Vsjee/angular-test-coffe',
         techStack: [
@@ -49,7 +49,7 @@ export const proyectsData: ProyectInfo[] = [
     {
         id: 3,
         title: 'ToDo-app',
-        image: 'public/toDo.png',
+        image: 'toDo.png',
         linkProyect: 'https://vsjee.github.io/React-to-do/',
         github: 'https://github.com/Vsjee/React-to-do',
         techStack: ['React', 'JavaScript', 'Bootstrap'],
@@ -57,7 +57,7 @@ export const proyectsData: ProyectInfo[] = [
     {
         id: 4,
         title: 'Galery-Share-app',
-        image: 'public/GaleryShareApp.png    ',
+        image: 'GaleryShareApp.png    ',
         linkProyect: 'https://photo-galery-rho.vercel.app/home',
         github: 'https://github.com/Vsjee/photo-galery',
         techStack: [
