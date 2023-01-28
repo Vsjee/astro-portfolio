@@ -15,238 +15,143 @@ import sqlIcon from '../../assets/sql.svg';
 ---
 
 <section>
-    <h1 id='stack'>Stack</h1>
-    <article class='logos'>
-        <div class='logo hiddenR'>
-            <picture>
-                <img
-                    src={reactIcon}
-                    title='React'
-                    alt='reactIcon'
-                    width='100'
-                    height='100'
-                />
-            </picture>
-        </div>
-        <div class='logo hiddenR'>
-            <picture>
-                <img
-                    src={angularIcon}
-                    title='Angular'
-                    alt='angularIcon'
-                    width='100'
-                    height='100'
-                />
-            </picture>
-        </div>
-        <div class='logo hiddenR'>
-            <picture>
-                <img
-                    src={jsIcon}
-                    title='JavaScript'
-                    alt='jsIcon'
-                    width='100'
-                    height='100'
-                />
-            </picture>
-        </div>
-        <div class='logo hiddenR'>
-            <picture>
-                <img
-                    src={tsIcon}
-                    title='TypeScript'
-                    alt='tsIcon'
-                    width='100'
-                    height='100'
-                />
-            </picture>
-        </div>
-    </article>
+  <h1 id='stack'>Stack</h1>
+  <article class='logos'>
+    <div class='logo hidden'>
+      <picture>
+        <img src={reactIcon} title='React' alt='reactIcon' width='100' height='100' />
+      </picture>
+    </div>
+    <div class='logo hidden'>
+      <picture>
+        <img src={angularIcon} title='Angular' alt='angularIcon' width='100' height='100' />
+      </picture>
+    </div>
+    <div class='logo hidden'>
+      <picture>
+        <img src={jsIcon} title='JavaScript' alt='jsIcon' width='100' height='100' />
+      </picture>
+    </div>
+    <div class='logo hidden'>
+      <picture>
+        <img src={tsIcon} title='TypeScript' alt='tsIcon' width='100' height='100' />
+      </picture>
+    </div>
+  </article>
 
-    <article class='logos'>
-        <div class='logo hiddenL'>
-            <picture>
-                <img
-                    src={htmlIcon}
-                    title='HTML5'
-                    alt='htmlIcon'
-                    width='100'
-                    height='100'
-                />
-            </picture>
-        </div>
-        <div class='logo hiddenL'>
-            <picture>
-                <img
-                    src={cssIcon}
-                    title='CSS3'
-                    alt='cssIcon'
-                    width='100'
-                    height='100'
-                />
-            </picture>
-        </div>
-        <div class='logo hiddenL'>
-            <picture>
-                <img
-                    src={scssIcon}
-                    title='SCSS'
-                    alt='scssIcon'
-                    width='100'
-                    height='100'
-                />
-            </picture>
-        </div>
-        <div class='logo hiddenL'>
-            <picture>
-                <img
-                    src={styleCompIcon}
-                    title='Style Components'
-                    alt='styleCompIcon'
-                    width='100'
-                    height='100'
-                />
-            </picture>
-        </div>
-    </article>
+  <article class='logos'>
+    <div class='logo hidden'>
+      <picture>
+        <img src={htmlIcon} title='HTML5' alt='htmlIcon' width='100' height='100' />
+      </picture>
+    </div>
+    <div class='logo hidden'>
+      <picture>
+        <img src={cssIcon} title='CSS3' alt='cssIcon' width='100' height='100' />
+      </picture>
+    </div>
+    <div class='logo hidden'>
+      <picture>
+        <img src={scssIcon} title='SCSS' alt='scssIcon' width='100' height='100' />
+      </picture>
+    </div>
+    <div class='logo hidden'>
+      <picture>
+        <img
+          src={styleCompIcon}
+          title='Style Components'
+          alt='styleCompIcon'
+          width='100'
+          height='100'
+        />
+      </picture>
+    </div>
+  </article>
 
-    <article class='logos'>
-        <div class='logo hiddenR'>
-            <picture>
-                <img
-                    src={bashIcon}
-                    title='Bash'
-                    alt='bashIcon'
-                    width='100'
-                    height='100'
-                />
-            </picture>
-        </div>
-        <div class='logo hiddenR'>
-            <picture>
-                <img
-                    src={gitIcon}
-                    title='Git'
-                    alt='gitIcon'
-                    width='100'
-                    height='100'
-                />
-            </picture>
-        </div>
-        <div class='logo hiddenR'>
-            <picture>
-                <img
-                    src={sqlIcon}
-                    title='SQL'
-                    alt='sqlIcon'
-                    width='100'
-                    height='100'
-                />
-            </picture>
-        </div>
-    </article>
+  <article class='logos'>
+    <div class='logo hidd'>
+      <picture>
+        <img src={bashIcon} title='Bash' alt='bashIcon' width='100' height='100' />
+      </picture>
+    </div>
+    <div class='logo hidden'>
+      <picture>
+        <img src={gitIcon} title='Git' alt='gitIcon' width='100' height='100' />
+      </picture>
+    </div>
+    <div class='logo hidden'>
+      <picture>
+        <img src={sqlIcon} title='SQL' alt='sqlIcon' width='100' height='100' />
+      </picture>
+    </div>
+  </article>
 </section>
 
 <style>
-    section {
-        min-height: 100vh;
-        display: grid;
-        text-align: center;
-        overflow: hidden;
-    }
+  section {
+    min-height: 100vh;
+    display: grid;
+    text-align: center;
+    overflow: hidden;
+  }
+  .logos {
+    display: flex;
+    justify-content: center;
+    transition: 1s ease-in-out;
+    gap: 5rem;
+  }
+
+  .hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s;
+  }
+
+  .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+
+  /* media queries */
+  @media screen and (max-width: 700px) {
     .logos {
-        display: flex;
-        justify-content: center;
-        transition: 1s ease-in-out;
-        gap: 5rem;
+      width: 100%;
+      gap: 1rem;
     }
+  }
 
-    .hiddenR,
-    .hiddenL {
-        opacity: 0;
-        filter: blur(5px);
-        transition: all 1s;
+  @media screen and (max-width: 500px) {
+    .logos {
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 2rem auto;
+      width: 300px;
     }
-
-    /* icons to the right */
-    .hiddenR {
-        transform: translateX(-300%);
-    }
-
-    /* icons to the left */
-    .hiddenL {
-        transform: translateX(300%);
-    }
-
-    .show {
-        opacity: 1;
-        filter: blur(0);
-        transform: translateX(0);
-    }
-
-    .logo:nth-child(1) {
-        transition-delay: 200ms;
-    }
-    .logo:nth-child(2) {
-        transition-delay: 400ms;
-    }
-    .logo:nth-child(3) {
-        transition-delay: 600ms;
-    }
-    .logo:nth-child(4) {
-        transition-delay: 800ms;
-    }
-
-    /* media queries */
-    @media screen and (max-width: 700px) {
-        .logos {
-            width: 100%;
-            gap: 1rem;
-        }
-        /* icons to the right */
-        .hiddenR {
-            transform: translateX(0%);
-        }
-
-        /* icons to the left */
-        .hiddenL {
-            transform: translateX(0%);
-        }
-    }
-
-    @media screen and (max-width: 500px) {
-        .logos {
-            flex-wrap: wrap;
-            gap: 2rem;
-            margin: 2rem auto;
-            width: 300px;
-        }
-    }
+  }
 </style>
 
 <script>
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            console.log(entry);
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-            } else {
-                entry.target.classList.remove('show');
-            }
-        });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      } else {
+        entry.target.classList.remove('show');
+      }
     });
+  });
 
-    const hiddenElementsToRight = document.querySelectorAll('.hiddenR');
-    hiddenElementsToRight.forEach((element) => observer.observe(element));
-
-    const hiddenElementsToLeft = document.querySelectorAll('.hiddenL');
-    hiddenElementsToLeft.forEach((element) => observer.observe(element));
+  const hiddenElements = document.querySelectorAll('.hidden');
+  hiddenElements.forEach((element) => observer.observe(element));
 </script>
 <script>
-    import { VanillaTilt } from '../../js/vanilla-tilt';
+  import { VanillaTilt } from '../../js/vanilla-tilt';
 
+  if (window.screen.width > 800) {
     VanillaTilt.init(document.querySelectorAll('.logo'), {
-        max: 26,
-        speed: 600,
+      max: 26,
+      speed: 600,
     });
+  }
 </script>
