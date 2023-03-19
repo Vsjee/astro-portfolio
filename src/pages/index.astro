@@ -7,25 +7,40 @@ import Stack from '../components/stack/Stack.astro';
 import ProyectsCarousel from '../components/proyects/ProyectsCarousel';
 import Contact from '../components/contact/Contact.astro';
 import '../styles/global.css';
+
+import { options } from '../js/particlesOptions';
+import Particles from 'astro-particles';
 ---
 
 <html lang='en'>
-    <head>
-        <meta charset='utf-8' />
-        <link rel='icon' type='image/svg+xml' href='/logoWhite.svg' />
-        <meta name='viewport' content='width=device-width' />
-        <meta name='generator' content={Astro.generator} />
-        <title>Portfolio</title>
-    </head>
-    <body>
-        <Header />
-        <main>
-            <Welcome />
-            <About />
-            <Stack />
-            <ProyectsCarousel client:visible />
-            <Contact />
-        </main>
-        <Footer />
-    </body>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/logoWhite.svg' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <Welcome />
+      <About />
+      <Stack />
+      <ProyectsCarousel client:visible />
+      <Contact />
+    </main>
+  </body>
+  <Particles id='tsparticles' options={options} />
+  <div class='area'>
+    <Footer />
+  </div>
 </html>
+
+<script>
+  import { tsParticles } from 'tsparticles-engine';
+  import { loadFull } from 'tsparticles';
+
+  (async () => {
+    await loadFull(tsParticles);
+  })();
+</script>
