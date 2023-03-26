@@ -29,10 +29,10 @@ import logo from '/logoBlack.svg';
     </button>
     <div class='res__container' id='responsive'>
       <ul class='header__nav__list--res'>
-        <a href='#about' class='header__nav__list--item'>About</a>
-        <a href='#stack' class='header__nav__list--item'>Stack</a>
-        <a href='#work' class='header__nav__list--item'>Work</a>
-        <a href='#contact' class='header__nav__list--item'>
+        <a href='#about' id='aboutNav' class='header__nav__list--item'>About</a>
+        <a href='#stack' id='stackNav' class='header__nav__list--item'>Stack</a>
+        <a href='#work' id='workNav' class='header__nav__list--item'>Work</a>
+        <a href='#contact' id='contactNav' class='header__nav__list--item'>
           <button class='item__btn'>Contact</button>
         </a>
       </ul>
@@ -42,15 +42,39 @@ import logo from '/logoBlack.svg';
 
 <script defer>
   const resBtn = document.getElementById('res__btn');
+  const about = document.getElementById('aboutNav');
+  const stack = document.getElementById('stackNav');
+  const work = document.getElementById('workNav');
+  const contact = document.getElementById('contactNav');
 
   resBtn.addEventListener('click', () => {
+    removeNavOnNavigation();
+  });
+
+  about.addEventListener('click', () => {
+    removeNavOnNavigation();
+  });
+
+  stack.addEventListener('click', () => {
+    removeNavOnNavigation();
+  });
+
+  work.addEventListener('click', () => {
+    removeNavOnNavigation();
+  });
+
+  contact.addEventListener('click', () => {
+    removeNavOnNavigation();
+  });
+
+  const removeNavOnNavigation = () => {
     const resNav = document.getElementById('responsive');
     if (resNav.classList.toggle('open')) {
       resNav.classList.add('open');
     } else {
       resNav.classList.remove('open');
     }
-  });
+  };
 </script>
 
 <style>
@@ -118,7 +142,7 @@ import logo from '/logoBlack.svg';
 
   .open {
     transition: 1s ease;
-    transform: translateY(50%);
+    transform: translateY(46%);
   }
 
   /* media queries */
@@ -141,6 +165,13 @@ import logo from '/logoBlack.svg';
     .header__nav {
       justify-content: space-between;
       padding: 0 5%;
+    }
+
+    .header__nav__list--item {
+      font-size: 1.5rem;
+    }
+    .item__btn {
+      font-size: 1.2rem;
     }
   } ;
 </style>
