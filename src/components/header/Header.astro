@@ -3,64 +3,144 @@ import logo from '/logoBlack.svg';
 ---
 
 <header class='header'>
-    <nav class='header__nav'>
-        <a href='#top'>
-            <picture class='header__nav__picture'>
-                <img src={logo} alt='logo' width='30' />
-            </picture>
+  <nav class='header__nav'>
+    <a href='#top'>
+      <picture class='header__nav__picture'>
+        <img src={logo} alt='logo' width='30' />
+      </picture>
+    </a>
+    <ul class='header__nav__list'>
+      <a href='#about' class='header__nav__list--item'>About</a>
+      <a href='#stack' class='header__nav__list--item'>Stack</a>
+      <a href='#work' class='header__nav__list--item'>Work</a>
+      <a href='#contact' class='header__nav__list--item'>
+        <button class='item__btn'>Contact</button>
+      </a>
+    </ul>
+    <button class='res_btn' id='res__btn'>
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='24'
+        height='24'
+        viewBox='0 0 24 24'
+        style='fill: rgba(0, 0, 0, 1);transform: ;msFilter:;'
+        ><path d='M4 6h16v2H4zm4 5h12v2H8zm5 5h7v2h-7z'></path>
+      </svg>
+    </button>
+    <div class='res__container' id='responsive'>
+      <ul class='header__nav__list--res'>
+        <a href='#about' class='header__nav__list--item'>About</a>
+        <a href='#stack' class='header__nav__list--item'>Stack</a>
+        <a href='#work' class='header__nav__list--item'>Work</a>
+        <a href='#contact' class='header__nav__list--item'>
+          <button class='item__btn'>Contact</button>
         </a>
-        <ul class='header__nav__list'>
-            <a href='#about' class='header__nav__list--item'>About</a>
-            <a href='#stack' class='header__nav__list--item'>Stack</a>
-            <a href='#work' class='header__nav__list--item'>Work</a>
-            <a href='#contact' class='header__nav__list--item'>
-                <button class='item__btn'>Contact</button>
-            </a>
-        </ul>
-    </nav>
+      </ul>
+    </div>
+  </nav>
 </header>
 
-<style>
-    .header {
-        padding: 0.5rem;
-        position: fixed;
-        width: 100%;
-        z-index: 1;
+<script defer>
+  const resBtn = document.getElementById('res__btn');
 
-        background: rgba(255, 255, 255, 0.8);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
+  resBtn.addEventListener('click', () => {
+    const resNav = document.getElementById('responsive');
+    if (resNav.classList.toggle('open')) {
+      resNav.classList.add('open');
+    } else {
+      resNav.classList.remove('open');
     }
+  });
+</script>
+
+<style>
+  .header {
+    padding: 0.5rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .header__nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .header__nav__list {
+    display: inline-flex;
+    gap: 1rem;
+  }
+  .header__nav__list--item {
+    display: grid;
+    place-content: center;
+    color: var(--fontSecond);
+    text-decoration: none;
+    transition: 0.3s ease-in;
+  }
+  .header__nav__list--item:hover {
+    color: var(--fontMainBlack);
+  }
+  .item__btn {
+    background-color: var(--fontMainBlack);
+    color: var(--fontMainWhite);
+    cursor: pointer;
+    padding: 0.3rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s ease-in;
+  }
+  .item__btn:hover {
+    background-image: var(--basicLinearGradient);
+  }
+
+  /* res nav */
+  .res__container {
+    width: 100%;
+    height: 100vh;
+    transform: translateY(-400%);
+    padding-top: 9rem;
+    position: absolute;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    z-index: -1;
+    transition: 1.8s ease;
+  }
+
+  .res_btn {
+    cursor: pointer;
+    border: none;
+    display: none;
+  }
+
+  .open {
+    transition: 1s ease;
+    transform: translateY(50%);
+  }
+
+  /* media queries */
+  @media screen and (max-width: 700px) {
     .header__nav {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+      justify-content: left;
     }
     .header__nav__list {
-        display: inline-flex;
-        gap: 1rem;
+      display: none;
     }
-    .header__nav__list--item {
-        display: grid;
-        place-content: center;
-        color: var(--fontSecond);
-        text-decoration: none;
-        transition: 0.3s ease-in;
+    .header__nav__list--res {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
     }
-    .header__nav__list--item:hover {
-        color: var(--fontMainBlack);
+
+    .res_btn {
+      display: flex;
     }
-    .item__btn {
-        background-color: var(--fontMainBlack);
-        color: var(--fontMainWhite);
-        cursor: pointer;
-        padding: 0.3rem;
-        font-size: 1rem;
-        border: none;
-        border-radius: 10px;
-        transition: 0.3s ease-in;
+    .header__nav {
+      justify-content: space-between;
+      padding: 0 5%;
     }
-    .item__btn:hover {
-        background-image: var(--basicLinearGradient);
-    }
+  } ;
 </style>
