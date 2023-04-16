@@ -1,21 +1,24 @@
 ---
 import devImg from '../../assets/development-4536630.svg';
+import 'animate.css';
 ---
 
 <section class='section'>
   <article class='section__info'>
-    <h1>David <span class='section__info--span'>Hernandez</span></h1>
-    <h3>Frontend Developer</h3>
+    <h1 class='animate__animated animate__fadeInLeft'>
+      David <span class='section__info--span'>Hernandez</span>
+    </h1>
+    <h3 class='animate__animated animate__fadeInLeft'>Frontend Developer</h3>
     <div class='info__btns'>
       <a href='/davidcv.pdf' Download>
-        <button class='btn'>Download CV</button>
+        <button class='btn animate__animated animate__zoomIn'>Download CV</button>
       </a>
       <a href='https://github.com/Vsjee' target='_blank'>
-        <button class='btn'>Github</button>
+        <button class='btn animate__animated animate__zoomIn'>Github</button>
       </a>
     </div>
   </article>
-  <article class='section__img' data-tilt>
+  <article class='section__img animate__animated animate__fadeInUp' data-tilt>
     <picture>
       <img src={devImg} alt='dev img' width='500' height='500' />
     </picture>
@@ -117,4 +120,8 @@ import devImg from '../../assets/development-4536630.svg';
       speed: 400,
     });
   }
+</script>
+
+<script>
+  import 'animate.css';
 </script>

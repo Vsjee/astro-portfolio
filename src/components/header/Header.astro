@@ -1,15 +1,16 @@
 ---
 import logo from '/logoBlack.svg';
+import 'animate.css';
 ---
 
 <header class='header'>
   <nav class='header__nav'>
     <a href='#top'>
       <picture class='header__nav__picture'>
-        <img src={logo} alt='logo' width='30' />
+        <img src={logo} alt='logo' width='30' class='animate__animated animate__fadeInLeft' />
       </picture>
     </a>
-    <ul class='header__nav__list'>
+    <ul class='header__nav__list animate__animated animate__fadeInRight'>
       <a href='#about' class='header__nav__list--item'>About</a>
       <a href='#stack' class='header__nav__list--item'>Stack</a>
       <a href='#work' class='header__nav__list--item'>Work</a>
@@ -17,7 +18,7 @@ import logo from '/logoBlack.svg';
         <button class='item__btn'>Contact</button>
       </a>
     </ul>
-    <button class='res_btn' id='res__btn'>
+    <button class='res_btn animate__animated animate__fadeInRight' id='res__btn'>
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width='24'
